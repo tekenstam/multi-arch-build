@@ -131,11 +131,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint
-        uses: golangci/golangci-lint-action@v2
-        with:
-          version: v1.29
-
       - name: Build
         id: docker_build
         uses: docker/build-push-action@v2
